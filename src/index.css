@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  --color-navy-dark: #0f172a;
+  --color-navy-light: #1e293b;
+  --color-brand-blue: #1d4ed8;
+  --color-brand-blue-hover: #1e40af;
+  --color-accent-gold: #eab308;
+  --color-accent-teal: #0d9488;
+  
+  --color-slate-850: #151e2e;
+  --color-slate-955: #020617;
+  --color-slate-905: #0d1527;
+  --color-slate-855: #111827;
+  --color-slate-805: #1e293b;
+  --color-slate-750: #273549;
+  --color-slate-505: #5e6b7e;
+  --color-slate-455: #8c9ba5;
+  --color-slate-350: #b0c0d0;
+  --color-slate-250: #d0dbe5;
+  --color-slate-150: #e8eff5;
+  --color-slate-105: #f4f7fa;
+  
+  --color-blue-955: #0f172a;
+  --color-blue-805: #1e40af;
+  --color-blue-650: #2563eb;
+  --color-blue-550: #3b82f6;
+  --color-blue-450: #60a5fa;
+  --color-blue-150: #dbeafe;
+  
+  --color-red-755: #b91c1c;
+  --color-red-655: #dc2626;
+  --color-red-650: #dc2626;
+  
+  --color-emerald-250: #a7f3d0;
+  --color-emerald-650: #059669;
+
+  --color-amber-250: #fde68a;
+  --color-amber-705: #b45309;
+
+  --color-pink-650: #db2777;
+  
+  --shadow-custom-md: 0 4px 20px -2px rgba(29, 78, 216, 0.08), 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-custom-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+/* Custom Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Base resets & styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Float animations */
+@keyframes float-pulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+.whatsapp-float {
+  animation: float-pulse 3s infinite ease-in-out;
+}
